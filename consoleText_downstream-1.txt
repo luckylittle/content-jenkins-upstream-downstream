@@ -1,0 +1,32 @@
+Started by upstream project "Upstream Project" build number 1
+originally caused by:
+ Started by user Lucian Maly
+Building in workspace /var/jenkins_home/workspace/Downstream project
+Cloning the remote Git repository
+Cloning repository git@github.com:luckylittle/content-jenkins-upstream-downstream.git
+ > git init /var/jenkins_home/workspace/Downstream project # timeout=10
+Fetching upstream changes from git@github.com:luckylittle/content-jenkins-upstream-downstream.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:luckylittle/content-jenkins-upstream-downstream.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url git@github.com:luckylittle/content-jenkins-upstream-downstream.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:luckylittle/content-jenkins-upstream-downstream.git # timeout=10
+Fetching upstream changes from git@github.com:luckylittle/content-jenkins-upstream-downstream.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:luckylittle/content-jenkins-upstream-downstream.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 1117fa3146fd7016d3938deffd6f40bc8f583a97 (refs/remotes/origin/master)
+Commit message: "java commit"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1117fa3146fd7016d3938deffd6f40bc8f583a97
+First time build. Skipping changelog.
+[Downstream project] $ /bin/sh -xe /tmp/hudson2706432689768260506.sh
++ javac -d . src/Rectangle.java src/Rectangulator.java
++ echo Main-Class: Rectangulator
++ jar -cvmf MANIFEST.MF rectangle.jar Rectangle.class Rectangulator.class
+added manifest
+adding: Rectangle.class(in = 408) (out= 283)(deflated 30%)
+adding: Rectangulator.class(in = 919) (out= 550)(deflated 40%)
+Finished: SUCCESS

@@ -1,0 +1,12 @@
+Started by user Lucian Maly
+Building in workspace /var/jenkins_home/workspace/Upstream Project
+[Upstream Project] $ /bin/sh -xe /tmp/hudson1814000125210748619.sh
++ BUILD_NUMBER
+/tmp/hudson1814000125210748619.sh: 2: /tmp/hudson1814000125210748619.sh: BUILD_NUMBER: not found
++ echo Width: 
+Width: 
++ echo Length: 47
+Length: 47
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of Downstream project
+Finished: SUCCESS

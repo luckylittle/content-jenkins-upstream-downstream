@@ -1,0 +1,36 @@
+Started by upstream project "Upstream Project" build number 2
+originally caused by:
+ Started by user Lucian Maly
+Building in workspace /var/jenkins_home/workspace/Downstream project
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:luckylittle/content-jenkins-upstream-downstream.git # timeout=10
+Fetching upstream changes from git@github.com:luckylittle/content-jenkins-upstream-downstream.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:luckylittle/content-jenkins-upstream-downstream.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 1117fa3146fd7016d3938deffd6f40bc8f583a97 (refs/remotes/origin/master)
+Commit message: "java commit"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1117fa3146fd7016d3938deffd6f40bc8f583a97
+ > git rev-list 1117fa3146fd7016d3938deffd6f40bc8f583a97 # timeout=10
+[Downstream project] $ /bin/sh -xe /tmp/hudson6093287431414809779.sh
++ javac -d . src/Rectangle.java src/Rectangulator.java
++ echo Main-Class: Rectangulator
++ jar -cvmf MANIFEST.MF rectangle.jar Rectangle.class Rectangulator.class
+added manifest
+adding: Rectangle.class(in = 408) (out= 283)(deflated 30%)
+adding: Rectangulator.class(in = 919) (out= 550)(deflated 40%)
+[Downstream project] $ /bin/sh -xe /tmp/hudson8191787160263203095.sh
++ java -jar rectangle.jar 2 47
+*** Your Rectangle ***
+
+Length: 2
+Width: 47
+Area: 94
+Perimeter: 98
+
+
+Finished: SUCCESS
